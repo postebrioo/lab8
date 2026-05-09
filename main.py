@@ -1,7 +1,6 @@
 import requests
 
 def get_quote():
-    # Це API дуже стабільне і просте
     url = "https://api.adviceslip.com/advice"
     
     try:
@@ -11,7 +10,6 @@ def get_quote():
         data = response.json()
         
         # У цьому API порада лежить в об'єкті 'slip' під ключем 'advice'
-        # Оскільки автора тут немає, ми підпишемо його як "Advice Slip API"
         advice = data['slip']['advice']
         
         print(f"\nЦитата: {advice}")
